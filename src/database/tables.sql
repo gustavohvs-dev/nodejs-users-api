@@ -1,0 +1,9 @@
+CREATE TABLE users(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(200) NOT NULL,
+        email VARCHAR(200) NOT NULL UNIQUE,
+        password VARCHAR(500) NOT NULL,
+        role INT(10) NOT NULL,
+        createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+        updatedAt DATETIME
+    );

@@ -1,0 +1,56 @@
+npm init 
+npm install express
+npm install @types/express
+npm install typescript
+yarn tsc --init
+Criar pasta disc e src
+Criar arquivo server.ts
+
+----------------------------
+import express from 'express'
+
+import { Router, Request, Response } from 'express';
+
+const app = express();
+
+const route = Router()
+
+app.use(express.json())
+
+route.get('/', (req: Request, res: Response) => {
+  res.json({ message: 'hello world with Typescript' })
+})
+
+app.use(route)
+
+
+app.listen(3333, () => 'server running on port 3333')
+-----------------------
+
+Adicionar alguns itens no tsconfig.json
+
+-----------------------
+    "outDir": "./dist",
+    "rootDir": "./src"
+-----------------------
+
+yarn tsc
+yarn add -D ts-node-dev
+
+Vá no package.json e adicione alguns scripts
+-----------------------
+"scripts": {
+  "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+  "build": "tsc"
+},
+-----------------------
+
+yarn dev 
+
+npm install -g nodemon
+npm install body-parser --save
+npm install cors --save
+npm install jsonwebtoken --save
+npm install knex --save
+npm install mysql2 
+
