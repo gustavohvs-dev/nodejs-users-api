@@ -6,7 +6,10 @@ const app = express()
 var router = express.Router()
 
 //Index route
-router.get("/", HomeController.index);
+router.get("/", HomeController.index)
+
+//Login route
+router.post("/login", UserController.login)
 
 //User routes
 router.get("/users", UserController.selectAll)

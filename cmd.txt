@@ -53,4 +53,7 @@ npm install cors --save
 npm install jsonwebtoken --save
 npm install knex --save
 npm install mysql2 
+npm install bcrypt
+npm i --save-dev @types/bcrypt
+npm i --save-dev @types/jsonwebtoken
 

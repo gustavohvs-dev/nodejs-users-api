@@ -7,6 +7,7 @@ REST API de cadastro de usuários utilizando as seguintes tecnologias:
     <li>Express.js</li>
     <li>Knex.js</li>
     <li>MySQL</li>
+    <li>JWT</li>
 </ul>
 
 ## Documentação
