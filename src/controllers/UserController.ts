@@ -2,8 +2,7 @@ import { Request, Response } from "express";
 import User from "../models/User";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-
-var JWTSecret = "SWLm;UYX'K-yna}+_Z"
+import config from "../config/config"
 
 class UserController
 {
@@ -74,7 +73,7 @@ class UserController
                     res.json({status: 0, info: "Senha incorreta"})
                     return
                 }else{
-                    var token = jwt.sign({email: email}, JWTSecret, {expiresIn: '48h'})
+                    var token = jwt.sign({email: email}, config.JWTSecret, {expiresIn: '48h'})
                     res.status(200)
                     res.json({status: 1, info: "Usuário logado com sucesso", token})
                     return
