@@ -3,6 +3,7 @@ npm install express
 npm install @types/express
 npm install typescript
 yarn tsc --init
+
 Criar pasta disc e src
 Criar arquivo server.ts
 
@@ -57,4 +58,7 @@ npm install bcrypt
 npm i --save-dev @types/bcrypt
 npm i --save-dev @types/jsonwebtoken
 npm install -g pm2
+npm install jest
+npm install @types/jest
+npm install supertest
 
