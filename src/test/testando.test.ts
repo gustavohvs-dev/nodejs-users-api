@@ -1,5 +1,5 @@
 let supertest = require("supertest")
-let request = supertest("www.google.com")
+let request = supertest("http://localhost:3333")
 
 describe("Grupo de teste 1", () => {
 
