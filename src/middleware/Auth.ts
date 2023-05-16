@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import config from "../config/config"
+import {JWTSecret} from "../config/config"
 
 class Auth
 {
@@ -12,7 +12,7 @@ class Auth
         }else{
             const bearer = authToken.split(' ');
             var token = bearer[1];
-            jwt.verify(token, config.JWTSecret, (err, data) => {
+            jwt.verify(token, JWTSecret, (err, data) => {
                 if(err){
                     res.status(401);
                     res.json({status:0, err: "Token inválido"});
