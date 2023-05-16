@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-ts": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "dev": "npx nodemon src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "pm2 start dist/server.js --name nodejs_api_rest",
+    "monit": "pm2 monit",
+    "delete": "pm2 delete all",
+    "save": "pm2 save"
   },
   "author": "Gustavo Soares",
   "license": "ISC",

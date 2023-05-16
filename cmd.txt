@@ -56,4 +56,5 @@ npm install mysql2
 npm install bcrypt
 npm i --save-dev @types/bcrypt
 npm i --save-dev @types/jsonwebtoken
+npm install -g pm2
 
